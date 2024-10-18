@@ -50,7 +50,7 @@ app.get("/workers/profissions", (request, response) => {
 
 //get specific worker
 app.get("/workers/specific", (request, response) => {
-  console.log("Specific: " + request.params[0]);
+  console.log("Specific: ", request.params);
   try {
     db.query(
       `SELECT * FROM funcionario WHERE cpf=?`,
